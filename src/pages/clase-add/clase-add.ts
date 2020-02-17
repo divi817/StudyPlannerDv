@@ -22,9 +22,13 @@ export class ClaseAddPage {
 
 
   clases:Array<{nombre:string, curso:string, profesor:string}>
+
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public datosP: DatosProvider, public alertC: AlertController) {
       this.clases=datosP.clases;
+      this.claseNombre="";
+      this.claseCurso="";
+      this.claseProfe="";
   }
 
   ionViewDidLoad() {

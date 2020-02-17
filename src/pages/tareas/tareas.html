@@ -17,8 +17,8 @@
     <ion-card *ngFor="let task of tasks; let i = index" style="border-style: solid;border-color: #00AAE4;">
         <ion-card-header ion-text color="primary" style="border-bottom-style: solid;border-color: #00AAE4;">
             <ion-col size="9" style="margin-top:50px">{{i+1}}. {{task.titulo}} </ion-col>
-            <ion-col size="3"><button color="secondary" ion-button small round style="float: right;" padding><ion-icon name="arrow-forward"></ion-icon></button></ion-col>
-            <p><small> Clase asignada: {{task.clase}}</small></p>
+            <ion-col size="3"><button color="secondary" ion-button small round style="float: right;" (click)="itemTapped($event, i)" padding><ion-icon name="arrow-forward"></ion-icon></button></ion-col>
+            <p><small> Clase: {{task.clase}}</small></p>
         </ion-card-header>
         <ion-card-content>
             <ion-label class="ion-text">

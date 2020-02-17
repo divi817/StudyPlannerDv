@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DatosProvider } from '../../providers/datos/datos';
 import { TareaAddPage } from '../tarea-add/tarea-add';
+import { TareaInfoPage } from '../tarea-info/tarea-info';
 
 @IonicPage()
 @Component({
@@ -9,12 +10,12 @@ import { TareaAddPage } from '../tarea-add/tarea-add';
   templateUrl: 'tareas.html',
 })
 export class TareasPage {
-  items: string[];
+
   tasks: Array<{titulo: string, descripcion: string, fecha: string, clase: string, fin:boolean}>;
   
   constructor(public navCtrl: NavController, public navParams: NavParams, 
     public DatosP: DatosProvider) {
-      this.items = DatosP.icons;
+
       this.tasks = DatosP.tasks;
 
   }
@@ -33,6 +34,13 @@ export class TareasPage {
 
   deleteTask(event, index){
     this.tasks.splice(index, 1);
+}
+
+itemTapped(event, item) {
+  // That's right, we're pushing to ourselves!
+  this.navCtrl.push(TareaInfoPage, {
+    item: item
+  });
 }
 
 }
