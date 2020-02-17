@@ -9,6 +9,7 @@ import { TareasPage } from '../pages/tareas/tareas';
 import { AboutPage } from '../pages/about/about';
 import { ClasesPage } from '../pages/clases/clases';
 import { TareaAddPage } from '../pages/tarea-add/tarea-add';
+import { ClaseAddPage } from '../pages/clase-add/clase-add';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,7 +23,8 @@ import { DatosProvider } from '../providers/datos/datos';
     TareasPage,
     AboutPage,
     ClasesPage,
-    TareaAddPage
+    TareaAddPage,
+    ClaseAddPage
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { DatosProvider } from '../providers/datos/datos';
     TareasPage,
     AboutPage,
     ClasesPage,
-    TareaAddPage
+    TareaAddPage,
+    ClaseAddPage
   ],
   providers: [
     StatusBar,

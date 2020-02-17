@@ -21,5 +21,15 @@ export class DatosProvider {
   addtoclases(nom: string, cur: string, pro: string):void{
     this.clases.push({nombre: nom, curso: cur, profesor: pro})
   }
+  comprobarClases(nom:string, cur:string):boolean{
+    let b:boolean = false;
+    
+    for(let clase of this.clases){
+      if(clase.nombre==nom && clase.curso==cur){
+        b=true;
+      }
+    }
+    return b;
+  }
 
 }

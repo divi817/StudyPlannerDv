@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DatosProvider } from '../../providers/datos/datos';
-import { TareaAddPage } from '../tarea-add/tarea-add';
+import { ClaseAddPage } from '../clase-add/clase-add';
 
 /**
  * Generated class for the ClasesPage page.
@@ -27,6 +27,10 @@ export class ClasesPage {
   }
 
   addClase($event){
-    this.navCtrl.push(TareaAddPage)
+    this.navCtrl.push(ClaseAddPage)
+  }
+
+  deleteClase($event, index){
+    this.clases.splice(index, 1);
   }
 }

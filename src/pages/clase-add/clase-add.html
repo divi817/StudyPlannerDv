@@ -13,22 +13,16 @@
 <ion-content padding>
     <ion-card>
         <ion-item>
-            <ion-input type="text" [(ngModel)]="taskNombre" placeholder="Introduzca nombre" style="padding:5px;"></ion-input>
+            <ion-input type="text" [(ngModel)]="claseNombre" placeholder="Introduzca nombre" style="padding:5px;"></ion-input>
         </ion-item>
         <ion-item>
-            <ion-select [(ngModel)]="taskClase" placeholder="Clase... " style="">
-                <ion-option value="">Ninguna</ion-option>
-                <ion-option *ngFor="let class of clases; let i = index" value="{{class.nombre}}">{{class.nombre}}</ion-option>
-            </ion-select>
+            <ion-input type="text" [(ngModel)]="claseCurso" placeholder="Introduzca curso" style="padding:5px;"></ion-input>
         </ion-item>
         <ion-item>
-            <ion-textarea [(ngModel)]="taskDescripcion" placeholder="Introduzca la descripción" style="padding:5px;"></ion-textarea>
-        </ion-item>
-        <ion-item>
-            <ion-datetime [(ngModel)]="taskFecha" value="00-00-0000" displayFormat="DD/MM/YY" placeholder="Fecha de entrega"></ion-datetime>
+            <ion-input type="text" [(ngModel)]="claseProfe" placeholder="Introduzca profesor" style="padding:5px;"></ion-input>
         </ion-item>
         <div>
-            <button ion-button full (click)="addTarea()"><ion-icon name="add"></ion-icon></button>
+            <button ion-button full (click)="addClase()"><ion-icon name="add"></ion-icon></button>
         </div>
     </ion-card>
 </ion-content>
