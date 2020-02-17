@@ -1,0 +1,42 @@
+<!--
+  Generated template for the TareasPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+        <ion-title>Lista de Tareas</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card *ngFor="let task of tasks; let i = index">
+        <ion-card-header ion-text color="primary">
+            <ion-col size="9" style="margin-top:50px">{{i+1}}. {{task.titulo}} </ion-col>
+            <ion-col size="3"><button color="secondary" ion-button small round style="float: right;" padding><ion-icon name="arrow-forward"></ion-icon></button></ion-col>
+            <p><small>{{task.clase}}</small></p>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-label class="ion-text">
+                <div *ngIf="task.fin==false">
+                    {{task.descripcion}}
+
+                </div>
+                <div *ngIf="task.fin==true" style="color:red">
+                    TAREA FINALIZADA
+                </div>
+            </ion-label>
+            <div small>Fecha límite: {{task.fecha}}</div>
+            <button ion-button color="danger" (click)="deleteTask($event, i)" small round><ion-icon name="trash"></ion-icon></button>
+            <button ion-button color="warning" *ngIf="task.fin==false" (click)="finTask($event, i)" small round><ion-icon name="checkbox-outline"></ion-icon></button>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
+
+<ion-footer>
+    <button ion-button color="secondary" block (click)="addTask($event)">Añadir Tarea</button>
+</ion-footer>
