@@ -32,7 +32,16 @@ export class ClaseAddPage {
   }
 
   addClase(){
-    if(this.datosP.comprobarClases(this.claseNombre, this.claseCurso)){
+    if(this.claseNombre.length==0 || !this.claseNombre){
+      this.presentAlert("Error nombre vacío o no válido");
+    }
+    else if(this.claseCurso.length==0 || !this.claseCurso){
+      this.presentAlert("Error curso vacío o no válido");
+    }
+    else if(this.claseProfe.length==0 || !this.claseProfe){
+      this.presentAlert("Error profesor vacío o no válido");
+    }
+    else if(this.datosP.comprobarClases(this.claseNombre, this.claseCurso)){
         this.presentAlert("Error, clase ya existe en este curso.")
     }
     else{

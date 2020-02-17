@@ -4,8 +4,8 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class DatosProvider {
 
-  tasks=[{titulo: 'PRÁCTICA Ionic', descripcion: 'Proyecto Ionic Completo', fecha: '17/02/2020',clase: 'Desarrollo de Interfaces', fin:false},
-  {titulo: 'PRÁCTICA Unity', descripcion: 'Desarrollar Dungeon Crawler', fecha: '29/02/2020',clase: 'Desarrollo de Videojuegos', fin:false}];
+  tasks=[{titulo: 'PRÁCTICA Ionic', descripcion: 'Proyecto Ionic Completo', fecha: '2020-02-18',clase: 'Desarrollo de Interfaces', fin:false},
+  {titulo: 'PRÁCTICA Unity', descripcion: 'Desarrollar Dungeon Crawler', fecha: '2020-02-20',clase: 'Desarrollo de Videojuegos', fin:false}];
   icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
     'american-football', 'boat', 'bluetooth', 'build'];
     clases=[{nombre: 'Desarrollo Interfaces', curso: '2º DAM FEMPA', profesor: 'Damián'}, 

@@ -13,17 +13,17 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-    <ion-card *ngFor="let clase of clases; let i = index">
-        <ion-card-header ion-text color="primary">
+<ion-content padding class="fondo">
+    <ion-card *ngFor="let clase of clases; let i = index" style="border-style: solid;border-color: #00AAE4;">
+        <ion-card-header ion-text color="primary" style="border-bottom-style: solid;border-color: #00AAE4;">
             {{clase.nombre}}
         </ion-card-header>
         <ion-card-content>
             <ion-label class="ion-text">
-                {{clase.curso}}
+               Curso: {{clase.curso}}
             </ion-label>
             <ion-label class="ion-text">
-                {{clase.profesor}}
+               Profesor/es: {{clase.profesor}}
             </ion-label>
             <button ion-button color="danger" small round (click)="deleteClase($event, i)"><ion-icon name="trash"></ion-icon></button>
         </ion-card-content>
